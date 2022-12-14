@@ -246,7 +246,6 @@ MonoBehaviour:
   image: {fileID: 3309254999969976528}
   statusImages: {fileID: 3866074389480983898}
   imageNumber: 7
-  chooseAvt: {fileID: 0}
 --- !u!114 &3309254999969976528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,7 +460,6 @@ MonoBehaviour:
   image: {fileID: 7133211311326609859}
   statusImages: {fileID: 3326376749280348961}
   imageNumber: 12
-  chooseAvt: {fileID: 0}
 --- !u!114 &7133211311326609859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,7 +598,6 @@ MonoBehaviour:
   image: {fileID: 7443184586657089825}
   statusImages: {fileID: 167313219586657132}
   imageNumber: 4
-  chooseAvt: {fileID: 0}
 --- !u!114 &7443184586657089825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1483,7 +1480,6 @@ MonoBehaviour:
   image: {fileID: 1140574473256917600}
   statusImages: {fileID: 1747532557638949356}
   imageNumber: 1
-  chooseAvt: {fileID: 8321219303981219996}
 --- !u!114 &1140574473256917600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1893,7 +1889,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!114 &1747532558607231099
 MonoBehaviour:
@@ -2291,7 +2287,6 @@ MonoBehaviour:
   image: {fileID: 1513890326778839555}
   statusImages: {fileID: 4287488224798008188}
   imageNumber: 5
-  chooseAvt: {fileID: 0}
 --- !u!114 &1513890326778839555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2430,7 +2425,6 @@ MonoBehaviour:
   image: {fileID: 6455646694664859342}
   statusImages: {fileID: 6002861778219763695}
   imageNumber: 6
-  chooseAvt: {fileID: 0}
 --- !u!114 &6455646694664859342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2569,7 +2563,6 @@ MonoBehaviour:
   image: {fileID: 7795802667041443600}
   statusImages: {fileID: 4299832673301224050}
   imageNumber: 8
-  chooseAvt: {fileID: 0}
 --- !u!114 &7795802667041443600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3164,7 +3157,6 @@ MonoBehaviour:
   image: {fileID: 4831642188929441749}
   statusImages: {fileID: 8130849177050894495}
   imageNumber: 3
-  chooseAvt: {fileID: 0}
 --- !u!114 &4831642188929441749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3303,7 +3295,6 @@ MonoBehaviour:
   image: {fileID: 4573770651042139376}
   statusImages: {fileID: 2544804039756295979}
   imageNumber: 10
-  chooseAvt: {fileID: 0}
 --- !u!114 &4573770651042139376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3442,7 +3433,6 @@ MonoBehaviour:
   image: {fileID: 2824046608864064853}
   statusImages: {fileID: 2869543485518327148}
   imageNumber: 9
-  chooseAvt: {fileID: 0}
 --- !u!114 &2824046608864064853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3657,7 +3647,6 @@ MonoBehaviour:
   image: {fileID: 3763570991346597839}
   statusImages: {fileID: 1043835251964370069}
   imageNumber: 11
-  chooseAvt: {fileID: 0}
 --- !u!114 &3763570991346597839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3796,7 +3785,6 @@ MonoBehaviour:
   image: {fileID: 3010795565527081425}
   statusImages: {fileID: 451883338073306176}
   imageNumber: 2
-  chooseAvt: {fileID: 0}
 --- !u!114 &3010795565527081425
 MonoBehaviour:
   m_ObjectHideFlags: 0

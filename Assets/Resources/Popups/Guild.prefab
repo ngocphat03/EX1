@@ -2885,6 +2885,7 @@ GameObject:
   - component: {fileID: 8875946997609830611}
   - component: {fileID: 8875946997609830608}
   - component: {fileID: 8875946997609830609}
+  - component: {fileID: 6884215981131595118}
   m_Layer: 5
   m_Name: Guild
   m_TagString: Guild
@@ -2932,7 +2933,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &8875946997609830608
 MonoBehaviour:
@@ -2974,3 +2975,26 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6884215981131595118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8875946997609830614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5611c01f425e49813bdc8bc43e349d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderOrder: 0
+  targetAnim: {fileID: 0}
+  animOn: {fileID: 0}
+  animOff: {fileID: 0}
+  avatar: {fileID: 8875946997043611242}
+  newAvatar: {fileID: 0}
+  btnSelectAvatar: {fileID: 3635911861753405909}
+  btnConfirm: {fileID: 247608075325457915}
+  inputName: {fileID: 4687486506907549272}
+  inputDescription: {fileID: 3366095092833440340}
+  inputRule: {fileID: 6848844437971439575}
