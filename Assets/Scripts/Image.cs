@@ -6,7 +6,7 @@ public class Image : ImageManage {
     public Button image;
     public GameObject statusImages;
     public string imageNumber;
-    public ChooseAvatarsPopup chooseAvt;
+    private ChooseAvatarsPopup chooseAvt;
     private GameObject chooseAvtPopup;
 
     private void Start() {

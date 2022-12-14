@@ -6,6 +6,7 @@ TagManager:
   tags:
   - StatusImage
   - ChooseAvatarsPopup
+  - Guild
   layers:
   - Default
   - TransparentFX

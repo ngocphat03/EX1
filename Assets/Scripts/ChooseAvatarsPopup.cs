@@ -34,12 +34,6 @@ namespace Script.ChooseAvatarsPopup
         private void ClosePopup()
         {
             Destroy(gameObject);
-            this.ResetStatusImages();
-        }
-
-        private void ResetStatusImages()
-        {
-            ImageManage.SetImage("");
         }
     }
 }
