@@ -7,8 +7,8 @@ namespace Script.ListGuildController
     using UnityEngine.UI;
     using Newtonsoft.Json;
     using Ensign.Unity.MVC;
-    using Script.ListGuildModel;
     using System.Collections;  
+    using Script.ListGuildModel;
     using Newtonsoft.Json.Converters;
     using System.Collections.Generic;
 

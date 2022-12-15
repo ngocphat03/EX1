@@ -11,10 +11,16 @@ namespace Script.GuildView
 
     public class GuildView : View<GuildController, ListGuildPlayer>
     {
-        [SerializeField] private Image avatar;
-        [SerializeField] private Sprite newAvatar;
+        [Header("Button and content button")]
         [SerializeField] private Button btnSelectAvatar;
         [SerializeField] private Button btnConfirm;
+        [SerializeField] private TextMeshProUGUI textBtn;
+
+        [Header("Output")]
+        [SerializeField] private Image avatar;
+        [SerializeField] private Sprite newAvatar;
+
+        [Header("Input user")]
         [SerializeField] private TMP_InputField inputName;
         [SerializeField] private TMP_InputField inputDescription;
         [SerializeField] private TMP_InputField inputRule;
@@ -26,13 +32,15 @@ namespace Script.GuildView
             Instance = this;
         }
 
-        private void Start() {
+        private void Start()
+        {
             this.btnConfirm.onClick.AddListener(Confirm);
             this.btnSelectAvatar.onClick.AddListener(OpenChooseAvatar);
-            this.ChangeAvatarInGuildPopup();
+            this.EditPlayer();
         }
 
-        private void FixedUpdate() {
+        private void FixedUpdate()
+        {
             this.ChangeAvatarInGuildPopup();
             this.LoadAvatarFormFile();
         }
@@ -50,6 +58,7 @@ namespace Script.GuildView
         private void Confirm()
         {
             this.SaveData();
+            this.RestStatusEdit();
             this.ResetImageNumber();
             this.CloserPopup();
         }
@@ -57,7 +66,7 @@ namespace Script.GuildView
         private void SaveData()
         {
             this.Controller.LoadDataToFile();
-            this.Model.ListPlayer.Add( new UserModel
+            this.Model.ListPlayer.Add(new UserModel
             {
                 imageNumber = ImageManage.GetImage(),
                 name = inputName.text,
@@ -69,8 +78,10 @@ namespace Script.GuildView
 
         private void LoadAvatarFormFile()
         {
-            if(ImageManage.GetImage() != "")
+            if (ImageManage.GetImage() != "") //Check user choosed avatar
+            {
                 this.newAvatar = Resources.Load<Sprite>("Sprites/" + ImageManage.GetImage());
+            }
         }
 
         private void CloserPopup()
@@ -81,6 +92,29 @@ namespace Script.GuildView
         private void ResetImageNumber()
         {
             ImageManage.SetImage("");
+        }
+
+        private void RestStatusEdit()
+        {
+            EditGuild.editStatus = false;
+        }
+
+        private void EditPlayer()
+        {
+            if(EditGuild.editStatus == true)
+            {
+                this.ChangeContentFormCache();
+                this.inputName.interactable = false;
+                this.textBtn.text = "Confirm";
+            }
+        }
+
+        private void ChangeContentFormCache()
+        {
+            ImageManage.SetImage(DataCache.imageNumberCache);
+            this.inputName.text = DataCache.nameCache;
+            this.inputDescription.text = DataCache.descriptionCache;
+            this.inputRule.text = DataCache.ruleCache;
         }
     }
 }

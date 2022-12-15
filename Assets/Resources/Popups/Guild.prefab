@@ -1056,7 +1056,7 @@ GameObject:
   - component: {fileID: 4353374951441411464}
   - component: {fileID: 4741570825225247235}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1110,7 +1110,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Confirm
+  m_text: 'OK
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2991,10 +2993,11 @@ MonoBehaviour:
   targetAnim: {fileID: 0}
   animOn: {fileID: 0}
   animOff: {fileID: 0}
-  avatar: {fileID: 8875946997043611242}
-  newAvatar: {fileID: 0}
   btnSelectAvatar: {fileID: 3635911861753405909}
   btnConfirm: {fileID: 247608075325457915}
+  textBtn: {fileID: 4741570825225247235}
+  avatar: {fileID: 8875946997043611242}
+  newAvatar: {fileID: 0}
   inputName: {fileID: 4687486506907549272}
   inputDescription: {fileID: 3366095092833440340}
   inputRule: {fileID: 6848844437971439575}

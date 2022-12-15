@@ -9,3 +9,11 @@ namespace Script.ListGuildModel
     public class ListGuildPlayer : ListPlayerModel
     {}
 }
+
+public class DataCache
+{
+    public static string imageNumberCache;
+    public static string nameCache;
+    public static string descriptionCache;
+    public static string ruleCache;
+}

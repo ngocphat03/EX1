@@ -3,11 +3,11 @@ using UnityEngine.UI;
 using Script.ChooseAvatarsPopup;
 
 public class Image : ImageManage {
-    public Button image;
-    public GameObject statusImages;
-    public string imageNumber;
-    private ChooseAvatarsPopup chooseAvt;
     private GameObject chooseAvtPopup;
+    private ChooseAvatarsPopup chooseAvt;
+    [SerializeField] private Button image;
+    [SerializeField] private string imageNumber;
+    [SerializeField] private GameObject statusImages;
 
     private void Start() {
         this.GetScriptChooseAvatarsPopup();
