@@ -14,6 +14,7 @@ namespace Script.GuildView
         [Header("Button and content button")]
         [SerializeField] private Button btnSelectAvatar;
         [SerializeField] private Button btnConfirm;
+        [SerializeField] private Button btnClose;
         [SerializeField] private TextMeshProUGUI textBtn;
 
         [Header("Output")]
@@ -35,6 +36,7 @@ namespace Script.GuildView
         private void Start()
         {
             this.btnConfirm.onClick.AddListener(Confirm);
+            this.btnClose.onClick.AddListener(CloserPopup);
             this.btnSelectAvatar.onClick.AddListener(OpenChooseAvatar);
             this.EditPlayer();
         }
@@ -57,10 +59,17 @@ namespace Script.GuildView
 
         private void Confirm()
         {
-            this.SaveData();
-            this.RestStatusEdit();
-            this.ResetImageNumber();
-            this.CloserPopup();
+            if (this.CheckNull())
+            {
+                this.SaveData();
+                this.RestStatusEdit();
+                this.ResetImageNumber();
+                this.CloserPopup();
+            }
+            else
+            {
+                Instantiate(Resources.Load<GameObject>("Popups/Notification") as GameObject);
+            }
         }
 
         private void SaveData()
@@ -101,7 +110,7 @@ namespace Script.GuildView
 
         private void EditPlayer()
         {
-            if(EditGuild.editStatus == true)
+            if (EditGuild.editStatus == true)
             {
                 this.ChangeContentFormCache();
                 this.inputName.interactable = false;
@@ -115,6 +124,18 @@ namespace Script.GuildView
             this.inputName.text = DataCache.nameCache;
             this.inputDescription.text = DataCache.descriptionCache;
             this.inputRule.text = DataCache.ruleCache;
+        }
+
+        private bool CheckNull()
+        {
+            if ((inputName.text == "") || (inputRule.text == "") || (ImageManage.GetImage() == ""))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

@@ -244,8 +244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 3309254999969976528}
-  statusImages: {fileID: 3866074389480983898}
   imageNumber: 7
+  statusImages: {fileID: 3866074389480983898}
 --- !u!114 &3309254999969976528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,8 +458,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 7133211311326609859}
-  statusImages: {fileID: 3326376749280348961}
   imageNumber: 12
+  statusImages: {fileID: 3326376749280348961}
 --- !u!114 &7133211311326609859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,8 +596,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 7443184586657089825}
-  statusImages: {fileID: 167313219586657132}
   imageNumber: 4
+  statusImages: {fileID: 167313219586657132}
 --- !u!114 &7443184586657089825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -825,7 +825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7075472, g: 0.45056072, b: 0.45056072, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1044,7 +1044,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1747532558387527458}
   m_HandleRect: {fileID: 1747532558387527461}
   m_Direction: 2
-  m_Value: 0.9999981
+  m_Value: 0.99999756
   m_Size: 0.42177472
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1259,7 +1259,7 @@ RectTransform:
   m_GameObject: {fileID: 1747532557501695132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1747532557805903602}
@@ -1293,7 +1293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1478,8 +1478,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1140574473256917600}
-  statusImages: {fileID: 1747532557638949356}
   imageNumber: 1
+  statusImages: {fileID: 1747532557638949356}
 --- !u!114 &1140574473256917600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1768,7 +1768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.70980394, g: 0.4509804, b: 0.4509804, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2285,8 +2285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1513890326778839555}
-  statusImages: {fileID: 4287488224798008188}
   imageNumber: 5
+  statusImages: {fileID: 4287488224798008188}
 --- !u!114 &1513890326778839555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2423,8 +2423,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 6455646694664859342}
-  statusImages: {fileID: 6002861778219763695}
   imageNumber: 6
+  statusImages: {fileID: 6002861778219763695}
 --- !u!114 &6455646694664859342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2561,8 +2561,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 7795802667041443600}
-  statusImages: {fileID: 4299832673301224050}
   imageNumber: 8
+  statusImages: {fileID: 4299832673301224050}
 --- !u!114 &7795802667041443600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3155,8 +3155,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 4831642188929441749}
-  statusImages: {fileID: 8130849177050894495}
   imageNumber: 3
+  statusImages: {fileID: 8130849177050894495}
 --- !u!114 &4831642188929441749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3293,8 +3293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 4573770651042139376}
-  statusImages: {fileID: 2544804039756295979}
   imageNumber: 10
+  statusImages: {fileID: 2544804039756295979}
 --- !u!114 &4573770651042139376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3431,8 +3431,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 2824046608864064853}
-  statusImages: {fileID: 2869543485518327148}
   imageNumber: 9
+  statusImages: {fileID: 2869543485518327148}
 --- !u!114 &2824046608864064853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3645,8 +3645,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 3763570991346597839}
-  statusImages: {fileID: 1043835251964370069}
   imageNumber: 11
+  statusImages: {fileID: 1043835251964370069}
 --- !u!114 &3763570991346597839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3783,8 +3783,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 3010795565527081425}
-  statusImages: {fileID: 451883338073306176}
   imageNumber: 2
+  statusImages: {fileID: 451883338073306176}
 --- !u!114 &3010795565527081425
 MonoBehaviour:
   m_ObjectHideFlags: 0
