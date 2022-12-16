@@ -7,6 +7,9 @@ TagManager:
   - StatusImage
   - ChooseAvatarsPopup
   - Guild
+  - InputName
+  - InputRule
+  - Avatar
   layers:
   - Default
   - TransparentFX
