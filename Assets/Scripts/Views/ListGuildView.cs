@@ -16,6 +16,7 @@ namespace Script.ListGuildView
 
     public class ListGuildView : View<ListGuildController, ListGuildPlayer>
     {
+        public static ListGuildView Instance;
         private string path;
 
         [Header("Get object to instantiate")]
@@ -30,30 +31,34 @@ namespace Script.ListGuildView
         [SerializeField] private TextMeshProUGUI description;
         [SerializeField] private TextMeshProUGUI informationPlayer;
 
-        private void Awake() { path = Application.persistentDataPath + "/dataUser.json"; }
+        private void Awake()
+        {
+            path = Application.persistentDataPath + "/dataUser.json";
+            Instance = this;
+        }
 
-        private void Start() {
+        private void Start()
+        {
             this.btnCreate.onClick.AddListener(CreateNewUser);
             this.CreateListPlayerToScreen();
         }
 
         private void CreateListPlayerToScreen()
         {
-            string ddd;
             //Get list players from file
             var outputJson = File.ReadAllText(this.path);
             var listPlayer = JsonConvert.DeserializeObject<ListPlayerModel>(outputJson).ListPlayer.ToArray();
 
             //Create list player
-            for(int i=0; i < listPlayer.Count(); i++)
+            for (int i = 0; i < listPlayer.Count(); i++)
             {
-                newAvatar                   = Resources.Load<Sprite>("Sprites/" + listPlayer[i].imageNumber);
-                avatar.sprite               = newAvatar;
-                name.text                   = "Name: " + listPlayer[i].name;
-                description.text            = "Description: " + listPlayer[i].description;
-                informationPlayer.text      = "ImageNumberPlayer: " + listPlayer[i].imageNumber + " ::endImg || NamePlayer: " + listPlayer[i].name + " ::endName || DescriptionPlayer: " + listPlayer[i].description + " ::endDes || RulePlayer: " + listPlayer[i].rule + " ::endRule";
+                newAvatar = Resources.Load<Sprite>("Sprites/" + listPlayer[i].imageNumber);
+                avatar.sprite = newAvatar;
+                name.text = "Name: " + listPlayer[i].name;
+                description.text = "Description: " + listPlayer[i].description;
+                informationPlayer.text = "IdPlayer: " + listPlayer[i].id + " ::endId" + "ImageNumberPlayer: " + listPlayer[i].imageNumber + " ::endImg || NamePlayer: " + listPlayer[i].name + " ::endName || DescriptionPlayer: " + listPlayer[i].description + " ::endDes || RulePlayer: " + listPlayer[i].rule + " ::endRule";
 
-                Instantiate(player, transform.position - new Vector3(0, 0, 0), transform.rotation ,parent); 
+                Instantiate(player, transform.position - new Vector3(0, 0, 0), transform.rotation, parent);
             }
         }
 
@@ -61,6 +66,12 @@ namespace Script.ListGuildView
         {
             ImageManage.SetImage(""); //Reset image number
             Instantiate(Resources.Load<GameObject>("Popups/Guild") as GameObject);
+        }
+
+        public void ResetListGuild()
+        {
+            Instantiate(Resources.Load<GameObject>("Popups/ListGuild") as GameObject);
+            Destroy(gameObject);
         }
     }
 }

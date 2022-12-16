@@ -7,6 +7,7 @@ namespace Script.GuildView
     using Script.GuildModel;
     using Ensign.Unity.MVC;
     using System.Collections;
+    using Script.ListGuildView;
     using Script.GuildController;
 
     public class GuildView : View<GuildController, ListGuildPlayer>
@@ -38,7 +39,7 @@ namespace Script.GuildView
             this.btnConfirm.onClick.AddListener(Confirm);
             this.btnClose.onClick.AddListener(CloserPopup);
             this.btnSelectAvatar.onClick.AddListener(OpenChooseAvatar);
-            this.EditPlayer();
+            this.SwitchToEditMode();
         }
 
         private void FixedUpdate()
@@ -59,29 +60,62 @@ namespace Script.GuildView
 
         private void Confirm()
         {
-            if (this.CheckNull())
+            if (!EditGuild.editStatus)
             {
-                this.SaveData();
-                this.RestStatusEdit();
-                this.ResetImageNumber();
-                this.CloserPopup();
+                if (this.CheckNull())
+                {
+                    this.SaveNewData();
+                    this.RestStatusEdit();
+                    this.ResetImageNumber();
+                    this.CloserPopup();
+                    ListGuildView.Instance.ResetListGuild();
+                }
+                else
+                {
+                    Instantiate(Resources.Load<GameObject>("Popups/Notification") as GameObject);
+                }
+                Debug.Log("Tao moi");
             }
             else
             {
-                Instantiate(Resources.Load<GameObject>("Popups/Notification") as GameObject);
+                if (this.CheckNull())
+                {
+                    this.EditOldData();
+                    this.RestStatusEdit();
+                    this.ResetImageNumber();
+                    this.CloserPopup();
+                    ListGuildView.Instance.ResetListGuild();
+                    Debug.Log("Chinh sua");
+                }
+                else
+                {
+                    Instantiate(Resources.Load<GameObject>("Popups/Notification") as GameObject);
+                }
             }
         }
 
-        private void SaveData()
+        private void SaveNewData()
         {
             this.Controller.LoadDataToFile();
+            DataModel.IncreaseId();
             this.Model.ListPlayer.Add(new UserModel
             {
+                id = DataModel.idPlayer,
                 imageNumber = ImageManage.GetImage(),
                 name = inputName.text,
                 description = inputDescription.text,
                 rule = inputRule.text,
             });
+            this.Controller.SaveDataToFile();
+        }
+
+        private void EditOldData()
+        {
+            this.Controller.LoadDataToFile();
+            this.Model.ListPlayer[DataCache.idCache - 1].imageNumber = ImageManage.GetImage();
+            this.Model.ListPlayer[DataCache.idCache - 1].name = this.inputName.text;
+            this.Model.ListPlayer[DataCache.idCache - 1].description = this.inputDescription.text;
+            this.Model.ListPlayer[DataCache.idCache - 1].rule = this.inputRule.text;
             this.Controller.SaveDataToFile();
         }
 
@@ -95,6 +129,7 @@ namespace Script.GuildView
 
         private void CloserPopup()
         {
+            this.RestStatusEdit();
             Destroy(gameObject);
         }
 
@@ -108,7 +143,7 @@ namespace Script.GuildView
             EditGuild.editStatus = false;
         }
 
-        private void EditPlayer()
+        private void SwitchToEditMode()
         {
             if (EditGuild.editStatus == true)
             {
@@ -118,6 +153,7 @@ namespace Script.GuildView
             }
         }
 
+        //This have a bug
         private void ChangeContentFormCache()
         {
             ImageManage.SetImage(DataCache.imageNumberCache);

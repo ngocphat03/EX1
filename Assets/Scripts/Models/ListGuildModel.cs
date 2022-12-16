@@ -12,6 +12,7 @@ namespace Script.ListGuildModel
 
 public class DataCache
 {
+    public static int idCache;
     public static string imageNumberCache;
     public static string nameCache;
     public static string descriptionCache;

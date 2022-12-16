@@ -14,6 +14,7 @@ public class EditGuild : MonoBehaviour
 
     [Header("All informatioin")]
     [SerializeField] private string allInformation;
+    public string idPlayer;
     public string imageNumberPlayer;
     public string namePlayer;
     public string descriptionPlayer;
@@ -38,6 +39,7 @@ public class EditGuild : MonoBehaviour
         this.LoadAllInformation();
         if (this.allInformation != "")
         {
+            this.idPlayer = allInformation.Substring(allInformation.IndexOf("IdPlayer:") + 10, allInformation.IndexOf("::endId") - allInformation.IndexOf("IdPlayer:") - 11);
             this.imageNumberPlayer = allInformation.Substring(allInformation.IndexOf("ImageNumberPlayer:") + 19, allInformation.IndexOf("::endImg") - allInformation.IndexOf("ImageNumberPlayer:") - 20);
             this.namePlayer = allInformation.Substring(allInformation.IndexOf("NamePlayer:") + 12, allInformation.IndexOf("::endName") - allInformation.IndexOf("NamePlayer:") - 13);
             this.descriptionPlayer = allInformation.Substring(allInformation.IndexOf("DescriptionPlayer:") + 19, allInformation.IndexOf("::endDes") - allInformation.IndexOf("DescriptionPlayer:") - 20);
@@ -54,6 +56,7 @@ public class EditGuild : MonoBehaviour
 
     private void ChangeDataCache()
     {
+        DataCache.idCache =  int.Parse(this.idPlayer);
         DataCache.imageNumberCache = this.imageNumberPlayer;
         DataCache.nameCache = this.namePlayer;
         DataCache.descriptionCache = this.descriptionPlayer;
