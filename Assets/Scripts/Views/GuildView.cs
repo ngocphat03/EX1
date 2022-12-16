@@ -100,7 +100,7 @@ namespace Script.GuildView
             DataModel.IncreaseId();
             this.Model.ListPlayer.Add(new UserModel
             {
-                id = DataModel.idPlayer,
+                id = PlayerPrefs.GetInt("idPlayer"),
                 imageNumber = ImageManage.GetImage(),
                 name = inputName.text,
                 description = inputDescription.text,

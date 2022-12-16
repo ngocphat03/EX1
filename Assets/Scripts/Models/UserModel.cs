@@ -1,4 +1,5 @@
 using Ensign;
+using UnityEngine;
 using System.Collections.Generic;
 
 public class UserModel : IDataModel 
@@ -17,10 +18,10 @@ public class ListPlayerModel : IDataModel
 
 public class DataModel
 {
-    public static int idPlayer;
-
     public static void IncreaseId()
     {
-        idPlayer++;
+        int idPl = PlayerPrefs.GetInt("idPlayer");
+        idPl++;
+        PlayerPrefs.SetInt("idPlayer", idPl);
     }
 }
